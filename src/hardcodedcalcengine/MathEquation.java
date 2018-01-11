@@ -1,11 +1,25 @@
 package hardcodedcalcengine;
 
 public class MathEquation {
-    public double val1, val2;
-    public char opCode;
-    public double result;
+    //operation fields
+    private double val1, val2;
+    private char opCode;
+    private double result;
+    
+    public double getVal1(){return val1;}
+    public void setVal1(double val1) {this.val1 = val1;}
+    
+    public double getVal2(){return val2;}
+    public void setVal2(double val2) {this.val2 = val2;}
+    
+    public char getOpCode(){return opCode;}
+    public void setOpCode(char opCode) {this.opCode = opCode ;}
+
+    public double getResult(){return result;}
+    
     
     public void execute(){
+        // all calculations are done here !
         switch (opCode) {
             case 'a':
                 result = val1 + val2;
