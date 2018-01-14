@@ -17,6 +17,21 @@ public class MathEquation {
 
     public double getResult(){return result;}
     
+    public MathEquation()
+    {
+        
+    }
+    
+    public MathEquation(char opCode){
+        this.opCode = opCode;
+    }
+    
+    public MathEquation(char opCode, double val1, double val2){
+        this(opCode);
+        this.val1 = val1;
+        this.val2 = val2;
+        
+    }
     
     public void execute(){
         // all calculations are done here !
@@ -27,8 +42,9 @@ public class MathEquation {
             case 's':
                 result = val1 - val2;
                 break;
-            case 'd':
+            case 'd':   
                 result = val2 != 0.0d ? val1 / val2 : 0.0d;
+                // ? means "then" : means "if" ? not reallu sure 
                 break;
             case 'm':
                 result = val1 * val2;
