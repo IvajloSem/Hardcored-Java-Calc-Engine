@@ -17,8 +17,20 @@ public class HardCodedCalcEngine {
             System.out.print("result = ");
             System.out.println(equation.getResult());
         }
+        
+        double DoubleVal1 = 10.0d;
+        double DoubleVal2 = 8.0d;
+        int IntValue1 = 16;
+        int IntValue2 = 5;
+        MathEquation equationOverload = new MathEquation('d');
+        
+        equationOverload.execute(DoubleVal1, DoubleVal2);
+        System.out.print("Result after overloading Doubles : ");
+        System.out.println(equationOverload.getResult());
+        
+        equationOverload.execute(IntValue1, IntValue2);
+        System.out.print("Result after overloading Ints : ");
+        System.out.println(equationOverload.getResult());
     }
-    
-    
-    
+   
 }
